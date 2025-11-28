@@ -57,7 +57,7 @@ header {
     padding: 10px;
     list-style: none;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: 10px;
 }
 
@@ -73,13 +73,13 @@ header {
 .user-message {
     background-color: var(--accent-color);
     color: var(--secondary-color);
-    align-self: flex-end;
+    align-self: flex-end; /* Выравниваем сообщения пользователя справа */
 }
 
 .bot-message {
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    align-self: flex-start;
+    align-self: flex-start; /* Выравниваем сообщения бота слева */
 }
 
 .input-area {
@@ -133,7 +133,7 @@ header {
     }
 
     header {
-        font-size: 1.5em; /* Уменьшаем размер заголовка */
+        font-size: 2em;
     }
 
     #chat-window {
