@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const messagesContainer = document.querySelector("#messages-container"); // Контейнер сообщений
-    const sendButton = document.querySelector("#send-btn"); // Кнопка отправки
-    const messageInput = document.querySelector("#message-input"); // Поле ввода
-    const clearHistoryBtn = document.querySelector("#clear-btn"); // Кнопка очистки чата
+    const messagesContainer = document.querySelector("#messages-container");
+    const sendButton = document.querySelector("#send-btn");
+    const messageInput = document.querySelector("#message-input");
+    const clearHistoryBtn = document.querySelector("#clear-btn");
 
     // Блокирует отправку следующего сообщения, пока формируется ответ
     let sendingInProgress = false;
 
     // Добавляет новое сообщение в чат
     function addMessage(text, isUser) {
-        let messageClass = isUser ? "user-message" : "bot-message"; // Определяем класс сообщения
+        let messageClass = isUser ? "user-message" : "bot-message";
         const messageItem = `
             <div class="message-item ${messageClass}">
                 ${text}
             </div>
         `;
         messagesContainer.insertAdjacentHTML("beforeend", messageItem); // Добавляем сообщение в конец списка
-        messagesContainer.scrollTo({ top: messagesContainer.scrollHeight }); // Прокручиваем до конца
+        messagesContainer.scrollTo({ top: messagesContainer.scrollHeight }); // Прокручиваем к концу
     }
 
     // Расширенный список диалогов и ответов
